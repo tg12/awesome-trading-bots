@@ -19,14 +19,36 @@ Please make sure the project is:
 - **Accurately described** in a single, neutral sentence.
 - **Placed in the right section** and kept in roughly alphabetical / relevance order.
 
+## Where to add your entry
+
+| If your project is mainly... | Add it under |
+| --- | --- |
+| A crypto bot | **Crypto trading bots** |
+| A stock / multi-asset engine | **Stock & multi-asset trading bots** |
+| FX-focused | **Forex trading bots** |
+| Options / futures / derivatives | **Options, futures & derivatives** |
+| A prediction-market tool | **Prediction-market bots** |
+| A backtester / research framework | **Backtesting & research frameworks** |
+| An order router / execution engine | **Execution engines & order routing** |
+| A data feed | **Market data & feeds** |
+| An indicator library | **Technical analysis & indicators** |
+| ML / RL for trading | **Machine learning & alpha research** |
+| Portfolio / risk tooling | **Portfolio, risk & analytics** |
+| An exchange / broker SDK | **Exchange & broker APIs** |
+
+A project may be cross-referenced from more than one section, but it must not be
+listed twice *within the same section* (the validator enforces this).
+
 ## Checks
 
-A lightweight CI check (`python tools/check_list.py`) verifies the README's
-structure and that there are no duplicate links. Run it locally before opening a
-PR:
+A lightweight, dependency-free CI check verifies the README's structure,
+table-of-contents anchors, link formatting, and that no project is duplicated
+within a section. A small `pytest` suite covers the validator itself. Run both
+locally before opening a PR:
 
 ```bash
 python tools/check_list.py
+python -m pytest -q tools
 ```
 
 ## Code of Conduct
